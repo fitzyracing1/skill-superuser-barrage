@@ -1,0 +1,43 @@
+# Skill: Superuser
+
+> A Grok skill for the Superuser MCP agent: guard pipeline, one-look two-fight three-listen four-break, and RULES.md.
+
+## Purpose
+Explain the skill as the rule book the Super agent must load before it acts. Source: fitzyracing1/skill-superuser.
+
+## How it works (plain English)
+1. Load RULES.md.
+2. Run the guard pipeline.
+3. Follow look, fight, listen, break in that named order.
+4. Only then call tools or update Pages.
+
+## Key ideas
+- Guard pipeline (check first)
+- Four-step protocol (look, fight, listen, break)
+- RULES.md (the written law of the repo)
+
+## The actual code
+```
+# source: fitzyracing1/skill-superuser
+load RULES.md
+guard()
+look(); fight(); listen(); break()
+```
+
+## Line-by-line translation
+1. load RULES.md → “read the written law”
+2. guard() → “check before acting”
+3. look(); fight(); listen(); break() → “the four named steps”
+
+## Decisions the program makes
+- If the guard fails → stop
+- If RULES.md is ignored → that run is invalid
+
+## What a person would notice
+The agent is not free-form; it has a written order.
+
+## Current status
+Barrage clone.
+
+## Next possible steps
+Open the HTML skill and RULES.md in Super.
